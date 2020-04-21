@@ -3,22 +3,22 @@ use VoltSolar;
 create table Usuário(
 idUsuario int primary key auto_increment,
 Nome varchar(40),
-CPF char(11)
+CPF char(11),
+fkCNPJ int,
+foreign key (fkCNPJ) references Empresa(CNPJ)
 )auto_increment = 1;
 
 create table Empresa(
 CNPJ int primary key,
 Nome varchar(40),
 Telefone char(12),
-Email varchar(40),
-qtdPlacas int
+Email varchar(40)
 );
 
-create table Placa_Solar(
+create table Sensor(
 idPlaca int primary key auto_increment,
 Posicionamento varchar(30),
 Captação varchar(40),
-Energia_gerada varchar (40),
 fkCNPJ int,
 foreign key (fkCNPJ) references Empresa(CNPJ),
 fkArduino int,
