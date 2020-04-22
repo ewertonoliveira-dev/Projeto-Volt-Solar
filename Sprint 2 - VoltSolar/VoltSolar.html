@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fundo">
+    <div>
+        <div class="header" id="menu">
+            <div class="container">
+                <div class="titulo"><a href="#">VoltSolar</a></div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html">login</a></li>
+                        <li><a href="#">serviços</a></li>
+                        <li><a href="#">sobre</a></li>
+                        <li><a href="#">contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <center class="simulador">
+                <div class="mensagem">
+                    <h1 class="sim">Simulador Financeiro</h1>
+                    <br>
+                    Informe sua conta de energia:<br><br><input type="text" id="valor_conta" placeholder="Ex: R$500.00">
+                    <button onclick="calcular()">Calcular</button>
+                    <br><br>
+                    <div id="mensagem"></div>
+                    <div id="div_mensagem"></div>
+                </div>
+            </center>
+        </div>
+</body>
+
+</html>
+<script>
+    function calcular() {
+        var conta = Number(valor_conta.value);
+        var desconto_sensor = conta * 0.4;
+        var preco_final = conta - desconto_sensor;
+        mensagem.innerHTML = `Com nosso projeto, considerando que você ja tem o sistema de placa solar, tera uma economia de R$:${desconto_sensor.toFixed(2)}
+        na conta do mes.`;
+        if (preco_final <= 0) {
+            div_mensagem.innerHTML = `A sua conta seria zerada!`
+        }
+        else {
+            div_mensagem.innerHTML = `O valor final da sua conta seria de R$:${preco_final.toFixed(2)}`
+        }
+
+    }
+</script>
