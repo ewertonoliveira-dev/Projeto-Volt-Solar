@@ -70,12 +70,16 @@ li :hover{
     outline: 0;
     border: 0;
     cursor: pointer;
+    font-family: Arial;
+    font-size: 15px;
+    text-decoration: none;
 }
 .button :hover{
     padding: 10px;
 }
 .button :active{
     background-color: brown;
+    padding: 9px;
 }
 .updown{
     position: fixed;
@@ -105,11 +109,20 @@ li :hover{
 outline: none;
 border-radius: 4px;
 padding: 5px;
+border:1px solid white;
+background:none;
+color: white;
 }
 .simulador button{
 margin-left: 10px;
-outline: none;
-border-radius: 4px;
 padding: 5px;
+border-radius: 4px;
+border:1px solid white;
+    
+outline:none;
+cursor: pointer;
+   
+background:none;
+color: white;
 }
 
