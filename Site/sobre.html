@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltSolar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body class="fundo" id="corpo">
+    <div class="tampa" style="display: none;" id="tampa"></div>
+    <div class="login" style="display: none;" id="login">
+        <b id="sair" onclick="fechar()">X</b>
+        <br>
+        <h1 class="titulo_login"> Login </h1>
+        <br>
+        <div class="campos">
+            <p>
+                <input type="text" class="inp_login" required placeholder="Login">
+            </p>
+            <br>
+            <p>
+                <input type="password" class="inp_senha" required placeholder="Senha">
+            </p>
+            <br>
+        </div>
+        <button class="btn_login">Login</button>
+    </div>
+    <div class="header" id="menu">
+        <div class="container">
+            <div class="titulo"><img src="logo.png" alt=""><a href="#">VoltSolar</a></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">inicio</a></li>
+                    <li><a href="VoltSolar.html">serviços</a></li>
+                    <li><a href="sobre.html">sobre</a></li>
+                    <li><a href="#">contato</a></li>
+                    <li><a href="#" onclick="logar()">login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="about">
+            <h2>Sobre a VoltSolar</h2>
+            <p>Um grupo de jovens, criaram a VoltSolar com o intuito de levar a energia para todo o Brasil, adaptaram
+                algo que já era muito bom, que é o painel solar, e fizeram com que esse produto pudesse gerar e
+                armazenar energia não só de dia, mas também de noite.</p>
+        </div>
+        <img src="sob.png" alt="" class="sob">
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function logar() {
+        login.style.display = "block";
+        corpo.style.position = "fixed";
+        tampa.style.display = "block";
+    }
+    function fechar() {
+        login.style.display = "none";
+        corpo.style.position = "relative";
+        tampa.style.display = "none";
+    }
+</script>
