@@ -14,19 +14,19 @@
     <div class="login" style="display: none;" id="login">
         <b id="sair" onclick="fechar()">X</b>
         <br>
-        <h1 class="titulo"> Login </h1>
+        <h1 class="titulo_login"> Login </h1>
         <br>
         <div class="campos">
             <p>
-                <span class="lbl_login">Login:</span> <input type="text" class="inp_login">
+                <input type="text" class="inp_login" required placeholder="Login">
             </p>
             <br>
             <p>
-                <span class="lbl_login">Senha:</span> <input type="password" class="inp_senha">
+                <input type="password" class="inp_senha" required placeholder="Senha">
             </p>
             <br>
         </div>
-        <button class="btn_login"><b>Login</b></button>
+        <button class="btn_login">Login</button>
     </div>
     <div>
         <div class="header" id="menu">
@@ -35,8 +35,8 @@
                 <div class="nav">
                     <ul>
                         <li><a href="index.html">inicio</a></li>
-                        <li><a href="#">serviços</a></li>
-                        <li><a href="#">sobre</a></li>
+                        <li><a href="VoltSolar.html">serviços</a></li>
+                        <li><a href="sobre.html">sobre</a></li>
                         <li><a href="#">contato</a></li>
                         <li><a href="#" onclick="logar()">login</a></li>
                     </ul>
@@ -46,7 +46,8 @@
                 <div class="mensagem">
                     <h1 class="sim">Simulador Financeiro</h1>
                     <br>
-                    Informe sua conta de energia:<br><br><input id="valor_conta" placeholder="Ex: R$500.00" autofocus>
+                    Informe sua conta de energia:<br><br><input id="valor_conta" type="number"
+                        placeholder="Ex: R$500.00" autofocus>
                     <button onclick="calcular()">Calcular</button>
                     <br><br>
                     <div id="mensagem"></div>
