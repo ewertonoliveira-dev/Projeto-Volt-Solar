@@ -36,27 +36,52 @@
                     <li><a href="index.html">inicio</a></li>
                     <li><a href="VoltSolar.html">serviços</a></li>
                     <li><a href="sobre.html">sobre</a></li>
-                    <li><a href="#">contato</a></li>
+                    <li><a href="contato.html">contato</a></li>
                     <li><a href="#" onclick="logar()">login</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="about">
-            <h2>Sobre a VoltSolar</h2>
-            <p>Um grupo de jovens, criaram a VoltSolar com o intuito de levar a energia para todo o Brasil, adaptaram
-                algo que já era muito bom, que é o painel solar, e fizeram com que esse produto pudesse gerar e
-                armazenar energia não só de dia, mas também de noite.</p>
-        </div>
-        <img src="sob.png" alt="" class="sob">
+    <div class="conteudo" id="menu">
+        saiba mais de nós <br>
+        <h1 class="text">sobre a<br>voltsolar</h1>
+        <p id="sobre">Um grupo de jovens, criaram a VoltSolar com o intuito de levar a energia para todo o Brasil,
+            adaptaram
+            algo que já era muito bom, que é o painel solar, e fizeram com que esse produto pudesse gerar e
+            armazenar energia não só de dia, mas também de noite.</p>
+        <img src="background/sob.png" alt="" class="sob">
     </div>
-
+    <div><a href="#menu" id="linkseta"><img src="icones/up.png" alt="up" class="updown" width="20px" id="imgupdown"></a>
+    </div>
+    </div>
 </body>
 
 </html>
 
 <script>
+    window.onscroll = function () { fmenu() };
+    window.onscroll = function () { fdesce() };
+    var updown = document.getElementById("menu");
+    var sticky = updown.offsetTop;
+
+    function fmenu() {
+        if (window.pageYOffset > sticky) {
+            updown.classList.add("sticky");
+        }
+        else {
+            updown.classList.remove("sticky");
+        }
+    }
+    function fdesce() {
+        if (window.pageYOffset > sticky) {
+            linkseta.href = "#menu";
+            imgupdown.src = "icones/up.png";
+        }
+        else {
+            linkseta.href = "#rodape";
+            imgupdown.src = "icones/down.png";
+        }
+    }
     function logar() {
         login.style.display = "block";
         corpo.style.position = "fixed";

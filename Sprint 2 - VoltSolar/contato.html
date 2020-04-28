@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financeiro</title>
+    <title>VoltSolar</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
 </head>
@@ -31,7 +31,7 @@
     <div>
         <div class="header" id="menu">
             <div class="container">
-                <div class="titulo"><img src="logo.png" alt=""><a href="index.html">VoltSolar</a></div>
+                <div class="titulo"><img src="logo.png" alt=""><a href="#">VoltSolar</a></div>
                 <div class="nav">
                     <ul>
                         <li><a href="index.html">inicio</a></li>
@@ -42,21 +42,45 @@
                     </ul>
                 </div>
             </div>
-            <center class="simulador">
-                <div class="mensagem">
-                    <h1 class="sim">Simulador Financeiro</h1>
-                    <br>
-                    Informe sua conta de energia:<br><br><input id="valor_conta" type="number"
-                        placeholder="Ex: R$500.00" autofocus>
-                    <button onclick="calcular()">Calcular</button>
-                    <br><br>
-                    <div id="mensagem"></div>
-                    <div id="div_mensagem"></div>
-                </div>
-            </center>
         </div>
-        <div><a href="#menu" id="linkseta"><img src="up.png" alt="up" class="updown" width="20px" id="imgupdown"></a>
+        <div class="conteudo" id="menu">
+            nos diga o que acha <br>
+            <h1 class="text">estamos abertos a<br>sugestões</h1>
+            <div class="sobre">
+                diga-nos seu nome
+                <br>
+                <input type="text" placeholder="Nome" class="inp_nome">
+                <br><br>sobre que quer comentar
+                <br>
+                <select name="" id="sugestao" class="seletor">
+                    <option value="">Escolha um feedback</option>
+                    <option value="">Parabenização</option>
+                    <option value="">Sugestão</option>
+                    <option value="">Critica</option>
+                    <option value="">Agradecimento</option>
+                </select>
+                <br><br>
+                faça seu comentário
+                <br>
+                <textarea class="sugestao" id="" cols="60" rows="10" placeholder="Escreva um comentário"></textarea>
+            </div>
+            <br>
+            <div class="button"><button class="btn">enviar</button></div>
+            <br><br>fale conosco <br><br>
+            <div class="contatos">
+                <ul>
+                    <li><img src="icones/facebook.png" width="20px"><br>Volt Solar </li>
+                    <li><img src="icones/email.png" width="20px"> <br>voltsolar@gmail.com</li>
+                    <li><img src="icones/instagram.png" width="20px"><br>VoltSolar</li>
+                    <li><img src="icones/whatsapp.png" width="20px"><br>(11) 9 ****-****</a></li>
+                </ul>
+            </div>
+
         </div>
+    </div>
+    <div><a href="#menu" id="linkseta"><img src="icones/up.png" alt="up" class="updown" width="20px" id="imgupdown"></a>
+    </div>
+    </div>
 </body>
 
 </html>
@@ -77,26 +101,12 @@
     function fdesce() {
         if (window.pageYOffset > sticky) {
             linkseta.href = "#menu";
-            imgupdown.src = "up.png";
+            imgupdown.src = "icones/up.png";
         }
         else {
             linkseta.href = "#rodape";
-            imgupdown.src = "down.png";
+            imgupdown.src = "icones/down.png";
         }
-    }
-    function calcular() {
-        var conta = Number(valor_conta.value);
-        var desconto_sensor = conta * 0.4;
-        var preco_final = conta - desconto_sensor;
-        mensagem.innerHTML = `Com nosso projeto, considerando que você ja tem o sistema de placa solar, tera uma economia de R$:${desconto_sensor.toFixed(2)}
-        na conta do mes.`;
-        if (preco_final <= 0) {
-            div_mensagem.innerHTML = `A sua conta seria zerada!`
-        }
-        else {
-            div_mensagem.innerHTML = `O valor final da sua conta seria de R$:${preco_final.toFixed(2)}`
-        }
-
     }
     function logar() {
         login.style.display = "block";
