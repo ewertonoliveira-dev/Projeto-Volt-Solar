@@ -8,6 +8,9 @@ fkCNPJ int,
 foreign key (fkCNPJ) references Empresa(CNPJ)
 )auto_increment = 1;
 
+insert into Usuário values
+();
+
 create table Empresa(
 CNPJ int primary key,
 Nome varchar(40),
@@ -15,18 +18,28 @@ Telefone char(12),
 Email varchar(40)
 );
 
+insert into  Empresa values
+();
+
 create table Sensor(
 idPlaca int primary key auto_increment,
 Posicionamento varchar(30),
 Captação varchar(40),
 fkCNPJ int,
-foreign key (fkCNPJ) references Empresa(CNPJ),
-fkArduino int,
-foreign key (fkArduino) references Sistemas(idArduino)
+foreign key (fkCNPJ) references Empresa(CNPJ)
 ) auto_increment = 101;
 
+insert into Sensor values
+();
+
 create table Sistemas(
-idArduino int primary key auto_increment,
+fkSensor int,
+foreign key (fkSensor) references Sensor(idPlaca),
+idArduino int, 
+primary key(fkSensor, idArduino),
 Setor varchar (40)
-)auto_increment= 1001;
+);
+
+insert into Sistemas values
+();
  
