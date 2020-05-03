@@ -88,7 +88,7 @@
         var conta = Number(valor_conta.value);
         var desconto_sensor = conta * 0.4;
         var preco_final = conta - desconto_sensor;
-        mensagem.innerHTML = `Com nosso projeto, considerando que você ja tem o sistema de placa solar, tera uma economia de R$:${desconto_sensor.toFixed(2)}
+        mensagem.innerHTML = `Com nosso projeto, considerando que você ja tem o sistema de placa solar, tera uma economia de 40% (R$:${desconto_sensor.toFixed(2)})
         na conta do mes.`;
         if (preco_final <= 0) {
             div_mensagem.innerHTML = `A sua conta seria zerada!`
