@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoltSolar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="icones/logo.png">
+  <script type="text/javascript" src="js/js.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+  <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+  
+</head>
+
+<body class="fundo" id="corpo">
+  <div class="tampa" style="display: none;" id="tampa" onclick="fecharlogin()"></div>
+  <div class="bemvindo" style="display: none;" id="bemvindo">
+    <h1>Bem Vindo (Nome da empresa)!</h1>
+  </div>
+  <div>
+    <div class="header" id="menu">
+      <div class="container">
+        <div class="titulo"><img src="icones/logo.png" alt=""><a href="#">VoltSolar</a></div>
+        <div class="nav">
+          <ul>
+            <li><a href="index.html">inicio</a></li>
+            <li><a href="servicos.html">serviços</a></li>
+            <li><a href="sobre.html">sobre</a></li>
+            <li><a href="contato.html">contato</a></li>
+            <li><a href="index.html">sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  <div class="conteudo">
+        <div class="perfil">
+            <div class="fotoperfil">Paineis: Quantidade</div>
+            <div class="dados">Nome da Empresa</div><br>
+            <div class="dados">CNPJ da Empresa</div><br>
+            <p></p>
+            <button class="sanfona"> Gráfico de dados</button>
+            <div class="painel">
+            <div id="grafico">
+                <section>
+                    <h2>Média: <label id='average'>0.00</label></h2>
+                    <h2>Média Hora: <label id='averageHour'>0.00</label></h2>
+                </section>
+                <section style="width:100%">
+                    <canvas id="chart"></canvas>
+                <section>
+                <script>
+            
+                    var context = document.getElementById("chart").getContext("2d");
+                    context.canvas.width = 1000;
+                    context.canvas.height = 300;
+                    
+                    var configuration = {
+                        type: 'line',
+                        data: {
+                            datasets: [{
+                                borderColor: window.chartColors.blue,
+                                label: "Luminosidade x Tempo",
+                                type: 'line',
+                                fill:false,
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                xAxes: [{
+                                    distribution: 'series',
+                                    ticks: {
+                                        beginAtZero:true
+                                    }
+                                }],
+                                yAxes: [{
+                                    scaleLabel: {
+                                        display: true,
+                                        labelString: 'LM'
+                                    },
+                                    ticks: {
+                                        suggestedMin: 100,
+                                        beginAtZero:false
+                                    }
+                                }]
+                            },
+                            animation: {
+                                duration: 0
+                            }
+                        }
+                    };
+                    var chart = new Chart(context, configuration);
+                    this.lastIndexTemp = 0;
+                    this.time = 0;
+            
+                    function get_data(){
+                        var agora = new Date();
+                        var hora = agora.getHours();
+                        var minuto = agora.getMinutes();
+                        var segundo = agora.getSeconds();
+                        var momento = `${hora>9?'':'0'}${hora}:${minuto>9?'':'0'}${minuto}:${segundo>9?'':'0'}${segundo}`;
+            
+                        var http = new XMLHttpRequest();
+                        http.open('GET', 'http://localhost:3000/api', false);
+                        http.send(null);        
+                        
+                        var obj = JSON.parse(http.responseText);
+                        console.log(obj)
+                        if (obj.data.length == 0){
+                            return;
+                        }
+            
+                        var _lastIndexTemp = this.lastIndexTemp;
+                        this.lastIndexTemp = obj.data.length;
+                        listTemp = obj.data.slice(_lastIndexTemp);
+                        if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
+                                chart.data.labels.shift();
+                                chart.data.datasets[0].data.shift();
+                            }
+            
+                            chart.data.labels.push(momento);
+                            chart.data.datasets[0].data.push(parseFloat(listTemp[0]));
+                            chart.update();
+                        document.getElementById('average').textContent = obj.average;
+                        document.getElementById('averageHour').textContent = obj.averageHour;
+                    } 
+                    
+                    get_data();
+            
+                    setInterval(() => {
+                        get_data();
+                    }, 1000);
+            
+                </script>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div><a href="#menu" id="linkseta"><img src="icones/up.png" alt="up" class="updown" width="20px" id="imgupdown"></a></div>
+  </div>
+  <footer id="rodape">
+    <div class="rodape">
+        <p> VoltSolar Copyright © 2020 </p>
+    </div>
+</footer>
+</body>
+
+</html>
+<script>
+    tampa.style.display = "block";
+    bemvindo.style.display = "block";
+    setInterval(() => {
+        fechar();
+    }, 5000);
+    
+    function fechar(){
+        tampa.style.display = "none"
+        bemvindo.style.display = "none"
+    }
+    var acc = document.getElementsByClassName("sanfona");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        }
+    });
+    }
+</script>
