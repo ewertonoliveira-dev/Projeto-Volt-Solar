@@ -1,0 +1,383 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    background-color: #fff;
+}
+.fundo{
+    background: url(../background/aaa.png);
+    width: 100%;
+    min-height: 657px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    float: left;
+    color: white;
+    padding: 0;
+    margin-top: 0; 
+}
+.corpo{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    width: 60%;
+    margin-left: 20%;
+    background-color: #646464;
+    z-index: 0;
+    height: 100%;
+    box-shadow: 0px 0 62px #052438;
+}
+.conteudo{
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding:65px 0px 20px;
+}
+.btn{
+    text-transform: uppercase;
+    border-radius: 30px;
+    color: #f0ffff;
+    background-color: #b22222;
+    padding: 8px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+.button :hover{
+    padding: 10px;
+}
+.button :active{
+    background-color: brown;
+}
+.updown{
+    position: fixed;
+    margin-left: 95%;
+    top: 93%;
+}
+.sticky + .content{
+    padding-top: 90%;
+}
+
+.sticky {
+    position: fixed;
+    top:    0%;
+}
+.lbl_login{
+    margin-left: 20%;
+}
+#sair{
+    float: right;
+    color: white;
+    margin-top: 7%;
+    margin-right: 7%;
+}
+.inp_nome{
+    border-radius: 5px;
+    width: 30%;
+    height: 20px;
+}
+.contatos li{
+    list-style: none;
+    display: inline;
+    float: right;
+    margin-right: 10%;
+}
+.contatos{
+    width: 90%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+}
+.sugestao{
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d7f5f5d7;
+    font-variant: small-caps;
+    font-size: medium;
+    font: bold;
+    text-align: center;
+}
+.seletor{
+    width: 20%;
+    border-radius: 5px;
+    height: 25px;
+    
+}
+#sobre{
+    width: 80%;
+    margin-left: 10%;
+}
+.sob{
+    float: right;
+    margin-right: 35%;
+    width: 30%;
+    height: 230px;
+    margin-right: 35%;
+    border-radius: 10px;    
+}
+
+.bemvindo{
+    position: fixed;
+    margin-top: 20%;
+    margin-left: 15%;
+    background-color: #363636aa;
+    color: #f0ffff;
+    width: 70%;
+    text-align: center;
+    border: #3794be ridge 4px;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.button :hover{
+    padding: 10px;
+}
+.button :active{
+    background-color: brown;
+    padding: 9px;
+}
+.updown{
+    position: fixed;
+    margin-left: 95%;
+    top: 93%;
+}
+.sticky + .content{
+    padding-top: 90%;
+}
+
+.sticky {
+    position: fixed;
+    top:    0%;
+}
+.sim{
+    padding-top: 10px;
+}
+.simulador{
+    border: #000000 double 2px;
+    background: linear-gradient(to top, #040118b4 30%,#130838b9 100%);
+    position: fixed;
+    margin-top: 10%;
+    margin-left: 15%;
+    width: 70%;
+    height: 50%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #0b1122d0;
+    font-family: Arial;
+    z-index: 3;
+}
+.simulador input{
+    outline: none;
+    border-radius: 4px;
+    padding: 5px;
+    padding-left: 10px;
+    border:1px solid white;
+    background:none;
+    color: white;
+}
+.simulador button{
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border:1px solid white;
+    outline:none;
+    cursor: pointer;   
+    background:none;
+    color: white;
+}
+.icone{
+    width: 60px;
+}
+.about{
+    margin-top: 2%;
+    margin-bottom: 10%;
+    width: 40%;
+    height: 230px;
+    margin-left: 10%;
+    background: #363636aa;
+    float: left;
+}
+.about p{
+font-size: 20px;
+text-align: center;
+font-family: Arial;
+}
+.about h2{
+    font-family: Arial;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.sb{
+    float: right;
+    margin-top: 2%;
+    width: 30%;
+    height: 230px;
+    margin-right: 10%;
+}
+.lt{
+    float: left;
+    width: 80%;
+    height: 150px;
+    margin-top: -5%;
+    margin-left: 10%;
+    background-color: #363636aa;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.linha{
+   background-size: cover;
+   width: 60%;
+   margin-left: 19%;
+}
+.inp_nome{
+    border-radius: 5px;
+    width: 30%;
+    height: 20px;
+}
+
+.cadastro {
+    margin-left: 35%;
+    margin-bottom: 10%;
+    border-radius: 30px;
+    margin-top: 100px;
+    background-color: #363636aa;
+    color: #f0ffff;
+    width: 30%;
+    height: 85%;
+    text-align: center;
+    border: #363636 solid 1.5px;
+}
+::placeholder{
+    color: #fff;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
+    width: 50%;
+    border-color: #21a6ff;
+}
+.btn_cad{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    text-transform: uppercase;
+    height: 8%;
+    border: 0;
+    background: none;
+    text-align: center;
+    color:#fff;
+    border: 1.5px solid #00c3ff;
+    margin-left: 0;
+    outline: none;
+    transition: 0.3s;
+    font-size: 13px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.btn_cad:hover{
+    background: #5769ce;
+}
+.rodape{
+    margin-top: 18%;
+    color: white;
+    background: #000000;
+    text-shadow: 1px 0px 10px black;
+    text-align: center;
+    max-height: 100px;
+    min-height: 50px;
+}
+.rodape .container p{
+    padding-top: 1%;
+}
+.perfil{
+    margin-top: 1%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 90%;
+    height: 100%;
+    background-color: #363636;
+    text-align: left;
+    margin-left: 5%;
+    border-radius: 10px;
+    border: #027bdd 10px;
+    border-style: groove;
+}
+.sanfona {
+    background-color: #3794be;
+    color: #f0ffff;
+    cursor: pointer;
+    padding-top: 100px;
+    padding: 18px;
+    width: 90%;
+    text-align: center;
+    border: none;
+    outline: #363636;
+    transition: 0.4s;
+    font-size: 15px;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+.active, .sanfona:hover {
+    background-color: #00c3ff;
+    font-size: 20px;
+}
+.painel {
+    padding: 0 18px;
+    background-color: #b8c2c7;
+    width: 87%;
+    margin-left: 5%;
+    border-radius: 10px;
+    display: none;
+    overflow: hidden;
+    font-size: 10px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: unset;
+}
+.fotoperfil {
+    margin-left: 5%;
+    float: left;
+}
+.dados{
+    float: right;
+    margin-right: 5%;
+}
+.produto{
+    padding-top: 5%;
+    background: rgb(44, 44, 44);
+    margin-top: 10%;
+    margin-left: 20%;
+    padding-bottom: 3%;
+    width: 60%;
+    height: 75%;
+    text-align: center;
+    border-radius: 10px;
+    font-family: Arial;
+}
+.produto button{
+    background: #319dac;
+    border-radius: 10px;
+    height: 38px;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+    transition: 0.3s;
+}
+.produto button:hover{
+    background: #237580;
+    transform: scale(1.1);
+    transition: 0.5;
+}
+.descricao{
+    display: none;
+}
+.item:hover .descricao{
+    display: block;
+    transition: 0.3s;
+}
+.imagem{
+    width: 10%;
+    border-radius: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}

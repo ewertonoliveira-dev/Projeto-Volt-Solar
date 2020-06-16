@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="../js/Geral.js"></script>
+
+  <link rel="stylesheet" href="../css/tampa.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="icones/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sobre.css">
+  <link rel="stylesheet" href="css/menu_e_rodape.css">
+  
+  <title>Voltsolar - Sobre</title>
+</head>
+
+<body class="fadeIn">
+
+  <!-- Tampa -->
+
+  <div class="tampa" style="display: none;" id="tampa" onclick="fechar()"></div>
+  <div class="login" style="display: none;" id="login">
+    <b id="sair" onclick="fechar()">X</b>
+    <br>
+    <h1 class="titulo_login"> Login </h1>
+    <br>
+    <div class="campos">
+      <p>
+        <input type="text" class="inp_login" required placeholder="Login">
+      </p>
+      <br>
+      <p>
+        <input type="password" class="inp_senha" required placeholder="Senha">
+      </p>
+      <br>
+    </div>
+    <button class="btn_login">Login</button>
+    <br><br>
+    <a href="cadastro.html" class="criar">Crie uma conta</a>
+  </div>
+
+
+  <!-- Header -->
+
+  <div class="header" id="menu">
+    <div class="container">
+      <div class="titulo"><img width="100%" height="60px" src="icones/logo.png" alt="">
+        <a href="#">VoltSolar</a>
+      </div>
+
+      <div class="nav">
+        <ul>
+          <li><a href="index.html">início</a></li>
+          <li><a href="servicos.html">serviços</a></li>
+          <li><a href="sobre.html">sobre</a></li>
+          <li><a href="contato.html">contato</a></li>
+          <li>|</li>
+          <li class="botao_login"><a href="#" onclick="logar()">login</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="box1">
+    <div class="txt">
+      <div>
+        <h1>Sobre a VOLTSOLAR</h1>
+        <p>UM GRUPO DE JOVENS, ESTUDANTES DA FACULDADE BANDTEC, CRIARAM A VOLTSOLAR COM O INTUITO DE LEVAR A ENERGIA
+          PARA
+          TODO O BRASIL, ADAPTARAM ALGO QUE JÁ ERA MUITO BOM, QUE É O PAINEL SOLAR, E
+          FIZERAM COM QUE ESSE PRODUTO PUDESSE GERAR E ARMAZENAR ENERGIA NÃO SÓ DE DIA, MAS TAMBÉM DE NOITE.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="box2">
+    <div class="txt2">
+      <div>
+        <h1>NOSSA LINHA DO TEMPO</h1>
+        <img src="FOTO.png" alt="">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

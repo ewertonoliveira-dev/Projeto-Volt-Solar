@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.titulo_dash{
+    width: 100%;
+    height: 150px;
+}
+.titulo_dash h1{
+    padding-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: bolder;
+    color: black;
+}
+
+.conteudo{
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 3%;
+}
+.conteudo .container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Conteudo 2 */
+
+.conteudo2{
+    margin-top: 1%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 3%;
+}
+.conteudo2 .container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Conteudo 3 */
+
+.conteudo3{
+    margin-top: 1%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 3%;
+}
+.conteudo3 .container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Boxes */
+
+.boxes{
+    width: 100%;
+    text-align: center;
+}
+.box{
+    display: inline-block;
+    border-radius: 7px;
+    width: 375px;
+    height: 180px;
+    margin: 25px 10px;
+    background-color: black;
+}
+.box h3{
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    bottom: 10px;
+}
+
+/* Gráficos */
+
+.graficos{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    bottom: 10px;
+}
+.graficos .container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.graficos .esquerda{
+    float: left;
+    margin-top: 31px;
+    width: 50%;
+    height: 70vh;
+}
+.graficos .esquerda .caixa{
+    width: 95%;
+    height: 70vh;
+    margin: auto;
+    border-radius: 7px;
+    background-color: black;
+}
+.graficos .esquerda .caixa h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Gráficos esquerda */
+
+.graficos .direita{
+    float: right;
+    margin-top: 31px;
+    width: 50%;
+    height: 70vh;
+}
+.graficos .direita .caixa{
+    width: 95%;
+    height: 70vh;
+    margin: auto;
+    border-radius: 7px;
+    background-color: black;
+}
+.graficos .direita .caixa h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+/* Header */
+
+.header{
+    height: 70px;
+    width: 100%;
+    background: #006bb3;
+    box-shadow: 0 0 1.2em black ;
+    border-bottom: solid #45a4b1;
+    z-index: 1;
+}
+.header .container{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.titulo a{
+    padding-left: 7%;
+    margin-top: 1.2%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+    float: left;
+    text-decoration: none;
+    color: #b4fff2;
+}
+.titulo img{
+    position: absolute;
+    margin-top: 0.4%;
+    width: 6%;
+}
+.nav{
+    margin-top: 8px;
+    float: right;    
+    z-index: 0;
+}
+.nav ul{
+    color: white;
+    font-weight: bolder;
+}
+.nav li{
+    list-style: none;
+    display: inline;
+    margin-left: 10px;
+    text-transform: uppercase;
+    transition-property: padding, border-bottom;
+    transition: 0.5s;
+}
+.nav ul a{
+    text-decoration: none;    
+    color: #f0ffffaa;
+    
+}
+.nav li :hover{
+    color: #f0ffff;
+    border-bottom: 2px solid rgb(33, 192, 255);
+    border-radius: 3px;
+    padding: 6px;
+    transition: 0.4s;
+}
+.header .botao_login{
+    transition-property: padding;
+    transition: 0.5s;
+}
+.header .botao_login:hover{
+    color: #f0ffff;
+    border: 2px solid rgb(33, 192, 255);
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(33, 192, 255);
+    padding: 6px;
+    transition: 0.4s;
+}
+.rodape{
+    color: white;
+    background: #000000;
+    text-shadow: 1px 0px 10px black;
+    max-height: 100px;
+    min-height: 50px;
+}
+.rodape .container p{
+    position: relative;
+    padding-top: 1%;
+    text-align: center;
+}

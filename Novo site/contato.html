@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltSolar - Contato</title>
+
+    <script src="../js/Geral.js"></script>
+
+    <link rel="stylesheet" href="../css/tampa.css">
+    <link rel="stylesheet" href="contato.css">
+    <link rel="shortcut icon" href="icones/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/menu_e_rodape.css">
+    
+</head>
+
+<body class="fundo" id="corpo" class="fadeIn">
+    
+    <div class="tampa" style="display: none;" id="tampa" onclick="fechar()"></div>
+    <div class="login" style="display: none;" id="login">
+        <b id="sair" onclick="fechar()">X</b>
+        <br>
+        <h1 class="titulo_login"> Login </h1>
+        <br>
+        <div class="campos">
+            <p>
+                <input type="text" class="inp_login" required placeholder="Login">
+            </p>
+            <br>
+            <p>
+                <input type="password" class="inp_senha" required placeholder="Senha">
+            </p>
+            <br>
+        </div>
+        <button class="btn_login">Login</button>
+        <br><br>
+        <a href="cadastro.html" class="criar">Crie uma conta</a>
+    </div>
+
+    <!-- Header -->
+
+    <div class="header" id="menu">
+        <div class="container">
+            <div class="titulo"><img width="100%" height="60px" src="icones/logo.png" alt="">
+                <a href="#">VoltSolar</a>
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">início</a></li>
+                    <li><a href="servicos.html">serviços</a></li>
+                    <li><a href="sobre.html">sobre</a></li>
+                    <li><a href="contato.html">contato</a></li>
+                    <li>|</li>
+                    <li class="botao_login"><a href="#" onclick="logar()">login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Conteudo-->
+    <div class="box">
+        <div class="container">
+            <h1>Nos diga o que está achando <br> <span><u>Estamos abertos a sugestões</u></span></h1>
+            <div class="contatos">
+                <ul>
+                    <li><img src="icones/facebook.png" width="20px"><br>Volt Solar </li>
+                    <li><img src="icones/email.png" width="20px"> <br>voltsolar@gmail.com</li>
+                    <li><img src="icones/instagram.png" width="20px"><br>VoltSolar</li>
+                    <li><img src="icones/whatsapp.png" width="20px"><br>(11) 9 ****-****</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="box2">
+        <div class="container">
+            <div class="conteudo_contato">
+                <h1>Entre em contato</h1>
+                <h5>Envie sua mensagem preenchendo o formulário abaixo</h5><br><br>
+                <form action="#">
+                    <input type="text" placeholder="Nome" class="inp_nome" required><br><br>
+
+                    <input type="text" placeholder="Email" class="inp" re4> <input type="text" placeholder="Telefone"
+                        class="inp" required> <br><br>
+
+                    <select name="" id="sugestao" class="seletor" required>
+                        <option value="">Escolha um feedback</option>
+                        <option value="">Parabenização</option>
+                        <option value="">Sugestão</option>
+                        <option value="">Critica</option>
+                        <option value="">Agradecimento</option>
+                    </select><br><br>
+
+                    <textarea class="sugestao" id="" cols="57" rows="10" placeholder="Escreva um comentário"
+                        required></textarea> <br><br>
+
+                    <div class="button">
+                        <button class="btn" type="submit">enviar</button>
+                        <br><br>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Rodapé-->
+
+    <div class="rodape">
+        <div class="container">
+            <p> VoltSolar Copyright © 2020 </p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #fff;
+    background: url(https://static.vecteezy.com/system/resources/previews/000/557/211/non_2x/abstract-stripe-wave-lines-graphic-blue-and-white-gradient-color-background-vector.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+.login_btn{
+    font: bold;
+    text-transform: uppercase;
+    color: #ffffffaa;
+    border-radius: 20px;
+    border: 0;
+    height: 30px;
+    margin-top: 28px;
+    margin-right: 20px;
+    width: 8%;
+    float: right;
+    padding: 5px;
+    background-color: #19679b;
+}
+.login_btn:hover{
+    margin-top: 29px;
+    box-shadow: 0 5px 5px #0a0a0a98;
+    border-bottom: 0;
+    padding: 5px;
+    background-color: #2980b9;
+}
+
+/* corpo */
+
+.corpo{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5%;
+    background-color: #292929;
+    border-radius: 10px;
+    position: relative;
+    height: auto;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    box-shadow: 0px 0 62px #052438;
+}
+.corpo .container{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.corpo .conteudo .container{
+    width: 100%;
+    height: 25vh;
+    border-radius: 10px;
+    background: url(https://media.gazetadopovo.com.br/2018/06/7c9005b397c21f761c192f83f686c35c-gpMedium.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.corpo .conteudo .container h1{
+    padding-top: 7%;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.corpo .botao_mais{
+    margin-top: 5%;
+}
+.corpo .container2{
+    width: 90%;
+    margin: auto;
+}
+.corpo .container h2, .corpo .container h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.corpo a{
+    text-decoration: none;
+}
+.corpo .boxes{
+    width: 100%;
+    height: auto;
+}
+.corpo .boxes .container{
+    width: 100%;
+}
+.corpo .saiba_mais{
+    padding-top: 5%;
+}
+
+/* Box 1 */
+
+.corpo .simulador{
+    width: 100%;
+    height: 45vh;
+}
+.corpo .simulador .one{
+    float: left;
+}
+.corpo .simulador1 .container{
+    margin-top: -20px;
+}
+.corpo .simulador1 p{
+    font-size: 25px;
+    text-align: justify;
+}
+.corpo .texto{
+    width: 55%;
+    margin: auto;
+}
+.corpo .simulador .simulador1{
+    float: right;
+}
+
+/* Box 2 */
+
+.corpo .contato{
+    width: 100%;
+    height: 45vh;
+    margin: auto;
+}
+.corpo .contato .two{
+    float: right;
+}
+.corpo .contatos{
+    float: left;
+}
+.corpo .contatos p{
+    font-size: 25px;
+    text-align: justify;
+}
+
+.corpo .box{
+    width: 300px;
+    height: 260px;
+    border-radius: 5px;
+    background-color: black;
+    color: black;
+    margin: 10px;
+}
+.corpo .boxes .faixa{
+    padding-top: 65%;
+}
+.box .faixa .container{
+    width: 95%;
+    margin:auto;
+}
+.box .faixa p{
+    color: white;
+    text-shadow: 2px 2px 3px rgb(0, 75, 160);
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.corpo .one{
+    background: url(https://static.vecteezy.com/system/resources/previews/000/158/916/non_2x/vector-financial-accountant-making-report-illustration.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.corpo .one:hover{
+    background-size: 140%;
+}
+.corpo .two{
+    background: url(https://image.freepik.com/vetores-gratis/mensagem-de-risco-ou-alerta-de-cautela-no-documento-ou-comentario-de-conteudo-de-dados-importantes-na-ilustracao-dos-desenhos-animados-do-telefone-movel_101884-740.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.corpo .two:hover{
+    background-size: 115%;
+}
+.corpo .conteudo button{
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 30px;
+    color: #f0ffff;
+    background-color: #006bb3;
+    padding: 8px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+.corpo .conteudo button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.updown{
+    position: fixed;
+    margin-left: 95%;
+    top: 93%;
+}
