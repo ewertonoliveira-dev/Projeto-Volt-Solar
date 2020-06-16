@@ -29,6 +29,11 @@ body{
     margin: auto;
     overflow: hidden;
 }
+.conteudo button, .conteudo2 button, .conteudo3 button{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+}
 
 /* Conteudo 2 */
 
@@ -105,7 +110,7 @@ body{
     height: 70vh;
     margin: auto;
     border-radius: 7px;
-    background-color: black;
+    
 }
 .graficos .esquerda .caixa h3{
     text-transform: uppercase;
@@ -126,7 +131,7 @@ body{
     height: 70vh;
     margin: auto;
     border-radius: 7px;
-    background-color: black;
+    
 }
 .graficos .direita .caixa h3{
     text-transform: uppercase;
