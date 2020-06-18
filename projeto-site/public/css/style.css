@@ -2,10 +2,8 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Kanit', sans-serif;
-    background-color: #fff;
 }
 .fundo{
-    background: url(../background/aaa.png);
     width: 100%;
     min-height: 657px;
     background-size: cover;

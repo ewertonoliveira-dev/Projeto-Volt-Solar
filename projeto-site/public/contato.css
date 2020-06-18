@@ -30,9 +30,6 @@ body{
     background: url(background/aaa.png);
     width: 100%;
     min-height: 657px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 /*Conteudo*/
@@ -77,7 +74,12 @@ body{
 }
 
 .conteudo_contato{
+    margin-top: -15px;
     text-align: center;
+    background: url(https://www.pcma.org/wp-content/uploads/2018/08/negotiate.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .conteudo_contato h1{
