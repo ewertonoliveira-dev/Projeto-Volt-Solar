@@ -31,24 +31,26 @@
 
   <!-- Login -->
 
+  <img src="aguarde.gif" id="img_aguarde" style="display: none;" class="loading">
   <div class="tampa" style="display: none;" id="tampa" onclick="fechar()"></div>
   <div class="login" style="display: none;" id="login">
-    <b id="sair" onclick="fechar()">X</b>
     <br>
     <h1 class="titulo_login"> Login </h1>
     <br>
     <div class="campos">
-      <p>
-        <input type="text" class="inp_login" required placeholder="Login">
-      </p>
-      <br>
-      <p>
-        <input type="password" class="inp_senha" required placeholder="Senha">
-      </p>
-      <br>
+      <form id="form_login" method="post" onsubmit="return entrar()">
+        <p>
+          Usuário <br><input type="text" name="login" class="inp_login">
+        </p>
+        <p>
+          Senha <br> <input type="password" name="senha" class="inp_senha">
+        </p>
+        <p>
+          <button id="btn_entrar" class="btn_login">Entrar</button>
+        </p>
+      </form>      
+      <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;"></div>
     </div>
-    <button class="btn_login"><a href="Dashboard.html">Login</a></button>
-    <br><br>
     <a href="cadastro.html" class="criar">Crie uma conta</a>
   </div>
 
@@ -76,25 +78,7 @@
   <!-- Corpo -->
 
   <div class="corpo">
-    <div class="container">
-
-      
-      
-      
-    <form id="form_login" method="post" onsubmit="return entrar()">
-        Usuário: <input type="text" name="login">
-        <br>
-        Senha: <input type="password" name="senha">
-        <br>
-        <button id="btn_entrar">Entrar</button>
-    </form>
-
-
-    
-    <img src="aguarde.gif" id="img_aguarde" style="display: none;">
-    
-    <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;">
-        
+    <div class="container">        
     </div>
 
       <div class="conteudo">
@@ -220,4 +204,12 @@
         div_erro.innerHTML = resposta;
     }
 
+    function logar() {
+        login.style.display = "block";
+        tampa.style.display = "block";
+    }
+    function fechar() {
+        login.style.display = "none";
+        tampa.style.display = "none"
+    }
 </script>

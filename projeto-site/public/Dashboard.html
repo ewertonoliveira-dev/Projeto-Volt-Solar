@@ -17,7 +17,107 @@
 <body>
     
     <!-- Header -->
+    <div class="corpo" style="display: none;" id="dashdash">
+        <div class="grafico fechar" id="dashzin" onclick="fechar()">
+                Perfil
+            </div>
+        <div class="dashb">
+            
+            <div class="titulo_dash">
+                <h1>Dashboard</h1>
+            </div>
 
+            <div>
+                Olá, <b id="b_usuario"></b>
+
+                <a href="tempo-real.html" class="real">Tempo Real</a>
+            </div>
+            
+            
+            <!-- Boxes -->
+
+            <div class="conteudo">
+                <div class="container">
+                    <div class="boxes">
+                        <button onclick="Rede()" class="box one">
+                            Fábrica 1
+                        </button>
+                        <button onclick="Rede()" class="box two">
+                            Fábrica 2
+                        </button>
+                        <button onclick="Rede()" class="box three">
+                            Fábrica 3
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteudo 2 -->
+
+            <div id="conteudo_2" style="display: none;" class="conteudo2">
+                <div class="container">
+                    <div class="boxes">
+                        <button onclick="Setor()" class="box one">
+                            Setor 1
+                        </button>
+                        <button onclick="Setor()" class="box two">
+                            Setor 2
+                        </button>
+                        <button onclick="Setor()" class="box three">
+                            Setor 3
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteudo 3 -->
+
+            <div id="conteudo_3" style="display: none;" class="conteudo3">
+                <div class="container">
+                    <div class="boxes">
+                        <button onclick="Placa()" class="box one">
+                            Placa 1
+                        </button>
+                        <button onclick="Placa()" class="box two">
+                            Placa 2
+                        </button>
+                        <button onclick="Placa()" class="box three">
+                            Placa 3
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráficos -->
+
+            <div id="grafico_sensor" style="display: none;" class="graficos">
+                <div class="container">
+                
+                    <!-- Esquerda -->
+
+                <div class="esquerda">
+                    <div class="caixa">
+                        
+                    </div>
+                </div>
+
+                <!-- Direita -->
+
+                <div class="direita">
+                    <div class="caixa">
+                        
+                        <div style="width:75%;">
+                            <div id="div_aguarde">Dados sendo obtidos...</div>
+                            <canvas id="canvas_grafico"></canvas>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="header" id="menu">
         <div class="container">
             <div class="titulo"><img width="100%" height="60px" src="icones/logo.png" alt="">
@@ -31,107 +131,35 @@
                     <li><a href="sobre.html">sobre</a></li>
                     <li><a href="contato.html">contato</a></li>
                     <li>|</li>
-                    <li class="botao_login"><a href="#" onclick="logar()">login</a></li>
+                    <li class="botao_login"><a href="#" onclick="logoff()">Sair</a></li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- Corpo -->
-
-    <div class="titulo_dash">
-        <h1>Dashboard</h1>
-    </div>
-
-    <div>
-        Olá, <b id="b_usuario"></b>
-        <a href="#" onclick="logoff()" style="color:maroon">[Sair]</a>
-
-        <a href="tempo-real.html">Tempo Real</a>
-    </div>
-    
-    
-    <!-- Boxes -->
-
-    <div class="conteudo">
-        <div class="container">
-            <div class="boxes">
-                <button onclick="Rede()" class="box one">
-                    Fábrica 1
-                </button>
-                <button onclick="Rede()" class="box two">
-                    Fábrica 2
-                </button>
-                <button onclick="Rede()" class="box three">
-                    Fábrica 3
-                </button>
-            </div>
+    <!-- Perfil -->
+    <div class="content">
+        <b>
+        <div class="esquerdo">
+            <img src="icones/perfil.jpg" alt="imagem de perfil" class="perfilimg">
+            <p>
+                Nome: <span id="nome"></span>
+            </p>
         </div>
-    </div>
-
-    <!-- Conteudo 2 -->
-
-    <div id="conteudo_2" style="display: none;" class="conteudo2">
-        <div class="container">
-            <div class="boxes">
-                <button onclick="Setor()" class="box one">
-                    Setor 1
-                </button>
-                <button onclick="Setor()" class="box two">
-                    Setor 2
-                </button>
-                <button onclick="Setor()" class="box three">
-                    Setor 3
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Conteudo 3 -->
-
-    <div id="conteudo_3" style="display: none;" class="conteudo3">
-        <div class="container">
-            <div class="boxes">
-                <button onclick="Placa()" class="box one">
-                    Placa 1
-                </button>
-                <button onclick="Placa()" class="box two">
-                    Placa 2
-                </button>
-                <button onclick="Placa()" class="box three">
-                    Placa 3
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Gráficos -->
-
-    <div id="grafico_sensor" style="display: none;" class="graficos">
-        <div class="container">
-          
-            <!-- Esquerda -->
-
-        <div class="esquerda">
-            <div class="caixa">
-                
-            </div>
-        </div>
-
-        <!-- Direita -->
-
         <div class="direita">
-            <div class="caixa">
-                <div style="width:75%;">
-                    <div id="div_aguarde">Dados sendo obtidos...</div>
-                    <canvas id="canvas_grafico"></canvas>
-                </div>
-            </div>
+            <p>
+                Sensores: <span id="sensores"></span>
+            </p>
+            <p>
+                Setores: <span id="setores"></span>
+            </p>
         </div>
-
-        </div>
+        </b>
+    </div>  
+    
+    <div class="grafico abrir" id="dashboard" onclick="abrir()">
+        Dashboard
     </div>
-
     <!-- rodapé -->
 
     <div class="rodape">
@@ -162,7 +190,7 @@
 
     window.onload = obterDadosGrafico;
 
-verificar_autenticacao();
+    verificar_autenticacao();
 
 // neste JSON tem que ser 'labels', 'datasets' etc, 
 // porque é o padrão do Chart.js
@@ -308,4 +336,16 @@ function plotarGrafico(dados) {
 
     setTimeout(atualizarGrafico, 5000);
 }
+    function abrir(){
+        dashdash.style.display = `block`
+        document.getElementById("dashdash").classList.add("animationopen")
+        document.getElementById("dashdash").classList.remove("animationclose")
+        setTimeout(function(){ dashboard.style.display = `none`;}, 600)
+    }
+    function fechar(){
+        document.getElementById("dashdash").classList.remove("animationopen")
+        document.getElementById("dashdash").classList.add("animationclose")
+        setTimeout(function(){ dashboard.style.display = `block`;
+        dashdash.style.display = `none`}, 450)
+    }
 </script>

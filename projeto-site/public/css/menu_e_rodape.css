@@ -79,6 +79,8 @@ body{
     transition: 0.4s;
 }
 .rodape{
+    float: left;
+    width: 100%;
     color: white;
     background: #000000;
     text-shadow: 1px 0px 10px black;
