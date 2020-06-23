@@ -6,17 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VoltSolar</title>
 
-  <script src="../js/Geral.js"></script>
-  <link rel="stylesheet" href="../css/tampa.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <script src="../js/Geral.js"></script> -->
+  <link rel="stylesheet" href="/css/tampa.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/menu_e_rodape.css">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="icones/logo.png">
 
+  <script src="funcoes.js"></script>
+
 </head>
 
 <body class="fundo" id="corpin">
-  <div class="tampa" style="display: none;" id="tampa" onclick="fechar()"></div>
+  <!-- <div class="tampa" style="display: none;" id="tampa" onclick="fechar()"></div>
   <div class="login" style="display: none;" id="login">
     <br>
     <h1 class="titulo_login">Login</h1>
@@ -37,7 +39,7 @@
     </p>
 
   </div>
-  <div>
+  <div> -->
 
     <!-- Header -->
 
@@ -61,40 +63,74 @@
     </div>
 
   </div>
-  <div class="corpo" style="text-align: center;">
-    <h1 class="titulo_cad"> Cadastro </h1>
-    <div class="campos1">
-      <p>
-        <input type="text" class="inp_login" required placeholder="Nome">
-      </p>
-      <p>
-        <input type="text" class="inp_login" required placeholder="Sobrenome">
-      </p>
-      <p>
-        <input type="text" class="inp_login" required placeholder="CPF">
-      </p>
-      <p>
-        <input type="text" class="inp_login" placeholder="Telefone Fixo">
-      </p>
-      <p>
-        <input type="text" class="inp_login" required placeholder="Telefone Móvel">
-      </p>
-      <p>
-        <input type="email" class="inp_login" required placeholder="Email">
-      </p>
-      <p>
-        <input type="text" class="inp_login" required placeholder="Senha">
-      </p>
-    </div>
-    <button class="btn_cad" type="submit" onclick="logar()">Cadastrar</button>
+  
+  
+  <div  class="corpo" style="text-align: center;">
+    <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+      <h2>Cadastre-se</h2>
+      
+      <input type="text" name="primeiroNome" id="">
+      
+      <input type="text" name="sobrenome" id="">
+      
+      <input type="text" name="email" id="">
+      
+      <input type="password" name="senha" id="">
+      
+      <input type="text" name="cpf" id="">
+      
+      <input type="text" name="telefoneFixo" id="">
+      
+      <input type="text" name="telefoneCelular" id="">
+      
+      <input type="text" name="fotoPerfil" id="">
+      
+      <input type="text" name="fkEmpresa" id="">
+      
+      <button type="submit" id="btn_entrar" name="button">Cadastrar</button>
+
+    </form>
   </div>
+
+
   <div><a href="#menu" id="linkseta"><img src="icones/up.png" alt="up" class="updown" width="20px" id="imgupdown"></a>
   </div>
   </div>
+  
   <footer id="rodape">
     <div class="rodape">
       <p> VoltSolar Copyright © 2020 </p>
     </div>
   </footer>
+
 </body>
 </html>
+<script>
+
+function cadastrar() {
+
+var formulario = new URLSearchParams(new FormData(form_cadastro));
+fetch("/usuarios/cadastrar", {
+    method: "POST",
+    body: formulario
+}).then(function (response) {
+
+    if (response.ok) {
+
+        window.location.href = 'index.html';
+
+
+    } else {
+
+        console.log('Erro de cadastro!');
+        response.text().then(function (resposta) {
+            div_erro.innerHTML = resposta;
+        });
+
+    }
+    });
+
+return false;
+}
+
+</script>

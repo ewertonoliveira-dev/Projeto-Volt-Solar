@@ -1,18 +1,21 @@
 let login_usuario;
 let nome_usuario;
+let imagem_usuario;
 
 function redirecionar_login() {
-    window.location.href = 'login.html';
+
 }
 
 function verificar_autenticacao() {
     login_usuario = sessionStorage.login_usuario_meuapp;
     nome_usuario = sessionStorage.nome_usuario_meuapp;
+    imagem_usuario = sessionStorage.imagem_usuario_meuapp;
     
     if (login_usuario == undefined)  {
         redirecionar_login();
     } else {
         b_usuario.innerHTML = nome_usuario;
+        imagem_perfil.src = imagem_usuario;
         validar_sessao();
     }
     

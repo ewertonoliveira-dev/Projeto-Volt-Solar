@@ -42,7 +42,7 @@
 
                 resposta.json().then(json => {
 
-                    sessionStorage.login_usuario_meuapp = json.primeiroNome;
+                    sessionStorage.login_usuario_meuapp = json.email;
                     sessionStorage.nome_usuario_meuapp = json.primeiroNome;
                     
                     window.location.href = 'grafico-chartjs.html';

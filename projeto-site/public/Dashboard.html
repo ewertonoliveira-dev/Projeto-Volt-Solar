@@ -141,7 +141,7 @@
     <div class="content">
         <b>
         <div class="esquerdo">
-            <img src="icones/perfil.jpg" alt="imagem de perfil" class="perfilimg">
+            <img id="imagem_perfil" src="icones/perfil.jpg" alt="imagem de perfil" class="perfilimg">
             <p>
                 Nome: <span id="nome"></span>
             </p>
@@ -188,10 +188,33 @@
 
     }
 
-    window.onload = obterDadosGrafico;
+    function verificar_autenticacao() {
+    login_usuario = sessionStorage.login_usuario_meuapp;
+    nome_usuario = sessionStorage.nome_usuario_meuapp;
+    imagem_usuario = sessionStorage.imagem_usuario_meuapp;
+    
+    if (login_usuario == undefined)  {
+        redirecionar_login();
+    } else {
+        b_usuario.innerHTML = nome_usuario;
+        imagem_perfil.src = imagem_usuario;
+        validar_sessao();
+    }
+    
+    }
 
+    function logoff() {
+    finalizar_sessao();
+    sessionStorage.clear();
+    redirecionar_login();
+    window.location.href = 'index.html';
+    }
+
+    window.onload = obterDadosGrafico;
+    
     verificar_autenticacao();
 
+    
 // neste JSON tem que ser 'labels', 'datasets' etc, 
 // porque é o padrão do Chart.js
 var dados = {
@@ -199,7 +222,7 @@ var dados = {
     datasets: [
         {
             yAxisID: 'y-temperatura',
-            label: 'Captação',
+            label: 'Sensor 1',
             borderColor: window.chartColors.red,
             backgroundColor: window.chartColors.red,
             fill: false,
@@ -207,7 +230,7 @@ var dados = {
         },
         {
             yAxisID: 'y-umidade',
-            label: 'Posição',
+            label: 'Sensor 2',
             borderColor: window.chartColors.blue,
             backgroundColor: window.chartColors.blue,
             fill: false,
