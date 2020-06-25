@@ -1,0 +1,92 @@
+.login {
+    position: fixed;
+    margin-top: 10%;
+    margin-left: 35%;
+    border-radius: 15px;
+    background-color: #141414;
+    color: #f0ffff;
+    width: 30%;
+    height: 60%;
+    text-align: center;
+    border: rgb(69, 187, 255) solid 1.5px;
+    z-index: 2;
+}
+.login h1{
+    position: relative;
+    top: 10px;
+    text-transform: uppercase;
+}
+.login input{
+    position: relative;
+    width: 170px;
+    margin-right: 1%;
+    border: 0;
+    background: none;
+    text-align: center;
+    color:#fff;
+    border: 1.5px inset #ffffff;
+    padding:8px 25px;
+    outline: none;
+    transition: 0.3s;
+    font-size: 14px;
+    border-radius: 30px;
+    transition-property: width;
+}
+.login input:hover{
+    width: 180px;
+}
+.login input:focus{
+    width: 180px;
+}
+input[type="text"]:focus, input[type="password"]:focus{
+    width: 50%;
+    border-color: #02b7ff;
+}
+.tampa{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #000000d5;
+}
+.login button{
+    padding: 10px;
+    width: 30%;
+    text-transform: uppercase;
+    height: 8%;
+    border: 0;
+    background: none;
+    text-align: center;
+    color:#fff;
+    border: 1.5px solid #ffffff;
+    margin-left: 0;
+    outline: none;
+    transition: 0.3s;
+    font-size: 13px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.login button:hover, .login button:active, .login button:focus{
+    background: rgba(255, 255, 255, 0.904);
+    transform: scale(1.1);
+    color: black;
+    box-shadow: 0 0 0.5em rgb(255, 255, 255);
+}
+.criar{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+.criar:hover{
+    transform: scale(1.1);
+    color: rgb(69, 187, 255);
+    transition: 0.3s;
+}
+.loading{
+    position: fixed;
+    margin-top: 20%;
+    height: 20%;
+    margin-left: 45%;
+    z-index: 4;
+}

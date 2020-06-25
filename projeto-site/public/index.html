@@ -8,7 +8,7 @@
 
   <script src="../js/Geral.js"></script>
 
-  <link rel="stylesheet" href="../css/tampa.css">
+  <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="Index.css">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="icones/logo.png">
@@ -31,27 +31,27 @@
 
   <!-- Login -->
 
-  <img src="aguarde.gif" id="img_aguarde" style="display: none;" class="loading">
+  <img src="https://www.rbaelevadores.com.br/img/loading.gif" id="img_aguarde" style="display: none;" class="loading">
   <div class="tampa" style="display: none;" id="tampa" onclick="fechar()"></div>
-  <div class="login" style="display: none;" id="login">
-    <br>
+  <div class="login" style="display: none;" id="logiin">
     <h1 class="titulo_login"> Login </h1>
-    <br>
+    
     <div class="campos">
-      
+    <br>
       <form id="form_login" method="post" onsubmit="return entrar()" action="login-forma">
         <p>
-          Usuário <br><input type="text" name="login" class="inp_login">
+          Usuário <br><input type="text" placeholder="Email" name="login">
         </p>
         <p>
-          Senha <br> <input type="password" name="senha" class="inp_senha">
+          Senha <br> <input type="password" placeholder="Senha" name="senha">
         </p>
         <p>
-          <button id="btn_entrar" type="submit" name="button" class="btn_login">Entrar</button>
+          <button id="btn_entrar" type="submit" name="button">Entrar</button>
         </p>
       </form>      
       <div id="div_erro" style="background-color: sandybrown; color: maroon; display: none;"></div>
     </div>
+
     <a href="cadastro.html" class="criar">Crie uma conta</a>
   </div>
 
@@ -207,11 +207,11 @@
     }
 
     function logar() {
-        login.style.display = "block";
+        logiin.style.display = "block";
         tampa.style.display = "block";
     }
     function fechar() {
-        login.style.display = "none";
+        logiin.style.display = "none";
         tampa.style.display = "none"
     }
 </script>

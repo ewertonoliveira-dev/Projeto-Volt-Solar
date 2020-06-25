@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VoltSolar</title>
 
-  <!-- <script src="../js/Geral.js"></script> -->
-  <link rel="stylesheet" href="/css/tampa.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/menu_e_rodape.css">
+  <script src="../js/Geral.js"></script>
+  <link rel="stylesheet" href="css/tampa.css">
+  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="stylesheet" href="css/menu_e_rodape.css">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="icones/logo.png">
 
@@ -18,7 +18,7 @@
 </head>
 
 <body class="fundo" id="corpin">
-  <!-- <div class="tampa" style="display: none;" id="tampa" onclick="fechar()"></div>
+  <div class="tampa" style="display: none;" id="tampa" onclick="fechar()"></div>
   <div class="login" style="display: none;" id="login">
     <br>
     <h1 class="titulo_login">Login</h1>
@@ -39,7 +39,7 @@
     </p>
 
   </div>
-  <div> -->
+  <div>
 
     <!-- Header -->
 
@@ -48,7 +48,7 @@
         <div class="titulo"><img width="100%" height="60px" src="icones/logo.png" alt="">
           <a href="#">VoltSolar</a>
         </div>
-
+  
         <div class="nav">
           <ul>
             <li><a href="index.html">início</a></li>
@@ -64,29 +64,34 @@
 
   </div>
   
-  
-  <div  class="corpo" style="text-align: center;">
+  <!-- Cadastro -->
+
+  <img class="wallpaper" src="https://conteudos.xpi.com.br/wp-content/uploads/2019/12/fundos-de-investimento.jpg" alt="">
+
+  <div class="corpo" style="text-align: center;">
     <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
       <h2>Cadastre-se</h2>
       
-      <input type="text" name="primeiroNome" id="">
+      <input type="text" name="primeiroNome" placeholder="Primeiro Nome" id="">
       
-      <input type="text" name="sobrenome" id="">
+      <input type="text" name="sobrenome" placeholder="Sobrenome" id="">
       
-      <input type="text" name="email" id="">
+      <input type="text" name="email" placeholder="Email" id="">
       
-      <input type="password" name="senha" id="">
+      <input type="password" name="senha" placeholder="Senha" id="">
       
-      <input type="text" name="cpf" id="">
+      <input type="text" name="cpf" placeholder="CPF" id="">
       
-      <input type="text" name="telefoneFixo" id="">
+      <input type="text" name="telefoneFixo" placeholder="Telefone Fixo" id="">
       
-      <input type="text" name="telefoneCelular" id="">
+      <input type="text" name="telefoneCelular" placeholder="Telefone Celular" id="">
       
-      <input type="text" name="fotoPerfil" id="">
+      <input type="text" name="fotoPerfil" placeholder="URL da sua foto de Perfil" id="">
       
-      <input type="text" name="fkEmpresa" id="">
+      <input type="text" name="fkEmpresa" placeholder="ID da sua empresa" id="">
       
+      <br>
+
       <button type="submit" id="btn_entrar" name="button">Cadastrar</button>
 
     </form>
@@ -97,11 +102,11 @@
   </div>
   </div>
   
-  <footer id="rodape">
-    <div class="rodape">
+  <div class="rodape">
+    <div class="container">
       <p> VoltSolar Copyright © 2020 </p>
     </div>
-  </footer>
+  </div>
 
 </body>
 </html>

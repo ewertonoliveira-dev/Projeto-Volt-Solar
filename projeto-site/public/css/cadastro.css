@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.wallpaper{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 155vh;
+    filter: blur(3px);
+    filter: grayscale(30%);
+}
+.corpo{
+    position: relative;
+    margin-top: 2%;
+    text-align: center;
+    display: block;
+    width: 37%;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    background-color: rgba(26, 26, 26, 0.993);
+    padding-bottom: 2%;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 144, 228);
+}
+.corpo h2{
+    padding-top: 2%;
+    text-transform: uppercase;
+}
+.corpo input{
+    outline: 0;
+    background: none;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 265px;
+    margin-bottom: 30px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 2px inset rgb(255, 255, 255);
+    border-radius: 25px;
+    transition: 0.5s;
+    transition-property: width;
+}
+.corpo input:hover{
+    width: 300px;
+}
+.corpo input:focus{
+    width: 300px;
+    border: 2.5px inset rgb(0, 123, 194);
+}
+::-webkit-input-placeholder {
+    color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: white;  
+}
+ 
+::-moz-placeholder {  /* Firefox 19+ */
+    color: white;  
+}
+ 
+:-ms-input-placeholder {  
+    color: white;  
+}
+.corpo button{
+    outline: 0;
+    background: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 150px;
+    padding: 15px;
+    border: 2.5px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+    transition-property: background, transform;
+}
+.corpo button:hover, .corpo button:active, .corpo button:focus{
+    background: rgba(255, 255, 255, 0.904);
+    transform: scale(1.1);
+    color: black;
+    box-shadow: 0 0 0.5em rgb(255, 255, 255);
+}
