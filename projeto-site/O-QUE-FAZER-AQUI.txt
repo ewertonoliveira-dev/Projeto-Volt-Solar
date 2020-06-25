@@ -13,4 +13,4 @@ npm start
 6. p/ testar acesse esses endereços no navegador:
   localhost:3000/usuarios
   localhost:3000/leituras/ultimas
-Deve aparecer o conteúdo das tabelas de usuário e de aquisição de dados
+Deve aparecer o conteúdo das tabelas de usuário e de aquisição de dados.
