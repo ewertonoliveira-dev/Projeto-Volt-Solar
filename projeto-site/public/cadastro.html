@@ -14,6 +14,7 @@
   <link rel="shortcut icon" href="icones/logo.png">
 
   <script src="funcoes.js"></script>
+  <script src="validacao.js"></script>
 
 </head>
 
@@ -72,27 +73,45 @@
     <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
       <h2>Cadastre-se</h2>
       
-      <input type="text" name="primeiroNome" placeholder="Primeiro Nome" id="">
+      <input type="text" name="primeiroNome" onkeyup="campo1()" placeholder="Primeiro Nome" id="inp1">
       
-      <input type="text" name="sobrenome" placeholder="Sobrenome" id="">
+      <div id="div_inp1"></div>
+
+      <input type="text" name="sobrenome" onkeyup="campo2()" placeholder="Sobrenome" id="inp2">
+
+      <div id="div_inp2"></div>
       
-      <input type="text" name="email" placeholder="Email" id="">
+      <input type="text" name="email" onkeyup="campo3()" placeholder="Email" id="inp3">
+
+      <div id="div_inp3"></div>
       
-      <input type="password" name="senha" placeholder="Senha" id="">
+      <input type="password" name="senha" onkeyup="campo4()" placeholder="Senha" id="inp4">
+
+      <div id="div_inp4"></div>
       
-      <input type="text" name="cpf" placeholder="CPF" id="">
+      <input type="text" name="cpf" onkeyup="campo5()" placeholder="CPF" id="inp5">
+
+      <div id="div_inp5"></div>
       
-      <input type="text" name="telefoneFixo" placeholder="Telefone Fixo" id="">
+      <input type="text" name="telefoneFixo" onclick="campo6()" placeholder="Telefone Fixo" id="inp6">
+
+      <div id="div_inp6"></div>
       
-      <input type="text" name="telefoneCelular" placeholder="Telefone Celular" id="">
+      <input type="text" name="telefoneCelular" onclick="campo7()" placeholder="Telefone Celular" id="inp7">
+
+      <div id="div_inp7"></div>
       
-      <input type="text" name="fotoPerfil" placeholder="URL da sua foto de Perfil" id="">
+      <input type="text" name="fotoPerfil" onclick="campo8()" placeholder="URL da sua foto de Perfil" id="inp8">
+
+      <div id="div_inp8"></div>
       
-      <input type="text" name="fkEmpresa" placeholder="ID da sua empresa" id="">
+      <input type="text" name="fkEmpresa" onclick="campo9()" placeholder="ID da sua empresa" id="inp9">
+
+      <div id="div_inp9"></div>
       
       <br>
 
-      <button type="submit" id="btn_entrar" name="button">Cadastrar</button>
+      <button type="submit" id="btn_entrar" onclick="aprovar()" name="button">Cadastrar</button>
 
     </form>
   </div>
