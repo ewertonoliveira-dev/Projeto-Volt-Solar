@@ -82,7 +82,7 @@ function iniciar_escuta() {
 // e faz um insert no banco de dados
 function registrar_leitura(luminosidade) {
 
-    const posicao = luminosidade/100;
+    const posicao = parseInt(Math.random() * (90));
     // Ver qual calculo;
 
     console.log('\nIniciando inclusão de novo registro...');

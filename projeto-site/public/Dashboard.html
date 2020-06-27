@@ -11,6 +11,7 @@
     <!-- scripts do Chart.js -->
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     <script type="text/javascript" src="https://www.chartjs.org/samples/latest/utils.js"></script>
+    <link rel="shortcut icon" href="icones/logo.png">
     <script type="text/javascript" src="funcoes.js"></script>
 
 </head>
@@ -34,16 +35,16 @@
             
             <!-- Boxes -->
 
-            <div class="conteudo">
+            <div id="conteudo" class="conteudo">
                 <div class="container">
                     <div class="boxes">
-                        <button onclick="Rede()" class="box one">
+                        <button onclick="Rede()" class="box one" id="rede1">
                             Fábrica 1
                         </button>
-                        <button onclick="Rede()" class="box two">
+                        <button onclick="Rede()" class="box two" id="rede2">
                             Fábrica 2
                         </button>
-                        <button onclick="Rede()" class="box three">
+                        <button onclick="Rede()" class="box three" id="rede3">
                             Fábrica 3
                         </button>
                     </div>
@@ -55,13 +56,13 @@
             <div id="conteudo_2" style="display: none;" class="conteudo2">
                 <div class="container">
                     <div class="boxes">
-                        <button onclick="Setor()" class="box one">
+                        <button onclick="Setor()" class="box one" id="setor1">
                             Setor 1
                         </button>
-                        <button onclick="Setor()" class="box two">
+                        <button onclick="Setor()" class="box two" id="setor2">
                             Setor 2
                         </button>
-                        <button onclick="Setor()" class="box three">
+                        <button onclick="Setor()" class="box three" id="setor3">
                             Setor 3
                         </button>
                     </div>
@@ -73,13 +74,13 @@
             <div id="conteudo_3" style="display: none;" class="conteudo3">
                 <div class="container">
                     <div class="boxes">
-                        <button onclick="Placa()" class="box one">
+                        <button onclick="Placa()" class="box one" id="placa1">
                             Placa 1
                         </button>
-                        <button onclick="Placa()" class="box two">
+                        <button onclick="Placa()" class="box two" id="placa2">
                             Placa 2
                         </button>
-                        <button onclick="Placa()" class="box three">
+                        <button onclick="Placa()" class="box three" id="placa3">
                             Placa 3
                         </button>
                     </div>
@@ -90,16 +91,6 @@
 
             <div id="grafico_sensor" style="display: none;" class="graficos">
                 <div class="container">
-                
-                    <!-- Esquerda -->
-
-                <div class="esquerda">
-                    <div class="caixa">
-                        
-                    </div>
-                </div>
-
-                <!-- Direita -->
 
                 <div class="direita">
                     <div class="caixa">
@@ -169,20 +160,81 @@
 </body>
 </html>
 <script>
-
+    var rede = 0;
+    var setor = 0;
+    var placa = 0;
     function Rede(){
-
+        if(rede == 0){
         conteudo_2.style.display='block';
-
+        document.getElementById(`rede1`).classList.add(`botaofechado`)
+        document.getElementById(`conteudo`).classList.add(`conteudoaberto`)
+        document.getElementById(`rede1`).classList.remove(`animationopenbotao`)
+        document.getElementById(`rede1`).classList.add(`animationclosebotao`)
+        document.getElementById(`rede1`).innerHTML = `F<br>a<br>b<br>r<br>i<br>c<br>a<br>s`
+        document.getElementById(`rede2`).style.display = `none`
+        document.getElementById(`rede3`).style.display = `none`
+        rede = 1;
+        }
+        else{
+        conteudo_2.style.display='none';
+        document.getElementById(`rede1`).classList.remove(`botaofechado`)
+        document.getElementById(`conteudo`).classList.remove(`conteudoaberto`)
+        document.getElementById(`rede1`).classList.add(`animationopenbotao`)
+        document.getElementById(`rede1`).classList.remove(`animationclosebotao`)
+        document.getElementById(`rede1`).innerHTML = `Fábrica 1`
+        document.getElementById(`rede2`).style.display = `block`
+        document.getElementById(`rede3`).style.display = `block` 
+        rede = 0           
+        }
     }
     function Setor(){
-
+        if(setor == 0){
         conteudo_3.style.display='block';
+        document.getElementById(`setor1`).classList.add(`botaofechado`)
+        document.getElementById(`conteudo_2`).classList.add(`conteudoaberto`)
+        document.getElementById(`setor1`).classList.remove(`animationopenbotao`)
+        document.getElementById(`setor1`).classList.add(`animationclosebotao`)
+        document.getElementById(`setor1`).innerHTML = `S<br>e<br>t<br>o<br>r<br>e<br>s`
+        document.getElementById(`setor2`).style.display = `none`
+        document.getElementById(`setor3`).style.display = `none`
+        setor = 1;
+        }
+        else{
+        conteudo_3.style.display='none';
+        document.getElementById(`setor1`).classList.remove(`botaofechado`)
+        document.getElementById(`conteudo_2`).classList.remove(`conteudoaberto`)
+        document.getElementById(`setor1`).classList.add(`animationopenbotao`)
+        document.getElementById(`setor1`).classList.remove(`animationclosebotao`)
+        document.getElementById(`setor1`).innerHTML = `Setor 1`
+        document.getElementById(`setor2`).style.display = `block`
+        document.getElementById(`setor3`).style.display = `block` 
+        setor = 0           
+        }
 
     }
     function Placa(){
-
+        if(placa == 0){
         grafico_sensor.style.display='block';
+        document.getElementById(`placa1`).classList.add(`botaofechado`)
+        document.getElementById(`conteudo_3`).classList.add(`conteudoaberto`)
+        document.getElementById(`placa1`).classList.remove(`animationopenbotao`)
+        document.getElementById(`placa1`).classList.add(`animationclosebotao`)
+        document.getElementById(`placa1`).innerHTML = `P<br>l<br>a<br>c<br>a<br>s`
+        document.getElementById(`placa2`).style.display = `none`
+        document.getElementById(`placa3`).style.display = `none`
+        placa = 1;
+        }
+        else{
+        grafico_sensor.style.display='';
+        document.getElementById(`placa1`).classList.remove(`botaofechado`)
+        document.getElementById(`conteudo_3`).classList.remove(`conteudoaberto`)
+        document.getElementById(`placa1`).classList.add(`animationopenbotao`)
+        document.getElementById(`placa1`).classList.remove(`animationclosebotao`)
+        document.getElementById(`placa1`).innerHTML = `Placa 1`
+        document.getElementById(`placa2`).style.display = `block`
+        document.getElementById(`placa3`).style.display = `block` 
+        placa = 0           
+        }
 
     }
 
@@ -357,6 +409,7 @@ function plotarGrafico(dados) {
     setTimeout(atualizarGrafico, 5000);
 }
     function abrir(){
+        window.scrollTo(0,0)
         dashdash.style.display = `block`
         document.getElementById("dashdash").classList.add("animationopen")
         document.getElementById("dashdash").classList.remove("animationclose")

@@ -18,8 +18,9 @@ body{
 }
 
 .conteudo{
-    margin-top: 3%;
-    width: 100%;
+    float: left;
+    margin-top: 1%;
+    width: 80%;
     height: auto;
     padding-bottom: 3%;
 }
@@ -38,8 +39,9 @@ body{
 /* Conteudo 2 */
 
 .conteudo2{
+    float: left;
     margin-top: 1%;
-    width: 100%;
+    width: 80%;
     height: auto;
     padding-bottom: 3%;
 }
@@ -53,8 +55,9 @@ body{
 /* Conteudo 3 */
 
 .conteudo3{
+    float: left;
     margin-top: 1%;
-    width: 100%;
+    width: 70%;
     height: auto;
     padding-bottom: 3%;
 }
@@ -72,6 +75,7 @@ body{
     text-align: center;
 }
 .box{
+    float: left;
     display: inline-block;
     border-radius: 7px;
     width: 30%;
@@ -81,8 +85,7 @@ body{
     transition: 0.3s;
 }
 .box:hover{
-    height: 120px;
-    background-color: #3d3d3d;
+    background-color: #3c4d58;
 }
 .box h3{
     text-align: center;
@@ -127,7 +130,7 @@ body{
 
 .graficos .direita{
     float: right;
-    margin-top: 31px;
+    margin-top: 5%;
     width: 50%;
     height: 70vh;
 }
@@ -204,7 +207,7 @@ body{
     color: wheat;
     text-align: center;
     transition: 0.3s;
-    z-index: 0;
+    z-index: 2;
 }
 .grafico:hover{
     cursor: pointer;
@@ -217,10 +220,33 @@ body{
 @keyframes open{
     0%{ margin-left: 100%;}
     100%{ margin-left: 0;}
-}.animationclose{
+}
+.animationclose{
     animation: close 0.5s ease-in-out;
 }
 @keyframes close{
     0%{ margin-left: 0;}
     100%{ margin-left: 100%;}
+}
+.botaofechado{
+    width: 50%;
+    float: left;
+    height: 300px;
+}
+.animationopenbotao{
+    animation: openbtn 1s ease-in-out;
+}
+@keyframes openbtn{
+    100%{ width: 30%;}
+    0%{ width: 10%;}
+}
+.animationclosebotao{
+    animation: closebtn 1s ease-in-out;
+}
+@keyframes closebtn{
+    0%{ width: 30%;}
+    100%{ width: 50%;}
+}
+.conteudoaberto{
+    width: 10%;
 }
