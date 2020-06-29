@@ -35,7 +35,7 @@ body{
 }
 .corpo .conteudo .container{
     width: 100%;
-    height: 25vh;
+    height: 33vh;
     border-radius: 10px;
     background: url(https://media.gazetadopovo.com.br/2018/06/7c9005b397c21f761c192f83f686c35c-gpMedium.jpg);
     background-size: 100%;
@@ -43,8 +43,9 @@ body{
     background-repeat: no-repeat;
 }
 .corpo .conteudo .container h1{
-    padding-top: 7%;
+    padding-top: 5%;
     color: rgb(255, 255, 255);
+    text-shadow: 2px 3px 2px black;
     text-transform: uppercase;
     font-weight: bolder;
 }
