@@ -3,6 +3,9 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+    background: url(https://lh3.googleusercontent.com/proxy/JZOr1aREQbbTQkvcrcmUoJoa8tArXamqnn-RA36eLhiLd-nL7TTE7R3FDolNFcFenxIhEikEcQGzUAl49Fs-7lGEjWOJmWOG6ogwmlGGlStNjf4FG5B2Cxw);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .titulo_dash{
     width: 100%;
@@ -171,11 +174,9 @@ body{
 .direita p{
     margin-top: 4%;
     width: 50%;
-    color: black;
 }
 .esquerda p{
     margin-top: 4%;
-    color: black;
     width: 50%;
 }
 .perfilimg{
@@ -183,7 +184,7 @@ body{
 }
 .content{
     float: left;
-    color: black    ;
+    color: white;
     margin-top: 2%;
     width: 80%;
     padding-left: 5%;

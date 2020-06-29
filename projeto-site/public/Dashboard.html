@@ -132,15 +132,12 @@
         <div class="esquerdo">
             <img id="imagem_perfil" src="icones/perfil.jpg" alt="imagem de perfil" class="perfilimg">
             <p>
-                Nome: <span id="nome"><b id="b_usuario"></b></span>
+                Nome: <span id="nome"><b id="b_usuario"></b> <b id="b_sobrenome"></b></span>
             </p>
         </div>
         <div class="direita">
             <p>
-                Sensores: <span id="sensores"></span>
-            </p>
-            <p>
-                Setores: <span id="setores"></span>
+                ID Empresa: <span id="sensores"> <b id="b_fkempresa"></b></span>
             </p>
         </div>
         </b>
@@ -242,12 +239,16 @@
     login_usuario = sessionStorage.login_usuario_meuapp;
     nome_usuario = sessionStorage.nome_usuario_meuapp;
     imagem_usuario = sessionStorage.imagem_usuario_meuapp;
+    fkempresa_usuario = sessionStorage.fkempresa_usuario_meuapp;
+    sobrenome_usuario = sessionStorage.sobrenome_usuario_meuapp;
     
     if (login_usuario == undefined)  {
         redirecionar_login();
     } else {
         b_usuario.innerHTML = nome_usuario;
         imagem_perfil.src = imagem_usuario;
+        b_fkempresa.innerHTML = fkempresa_usuario;
+        b_sobrenome.innerHTML = sobrenome_usuario;
         validar_sessao();
     }
     
@@ -421,4 +422,17 @@ function plotarGrafico(dados) {
         setTimeout(function(){ dashboard.style.display = `block`;
         dashdash.style.display = `none`}, 450)
     }
+</script>
+<script>
+    var ttChatLoaderS = document.createElement('script');
+    document.tomticketChatLoaderScriptVersion = 2;
+    ttChatLoaderS.src = 'https://volt-solar.tomticket.com/scripts-chat/chat.min.js'
+        + '?id=EP47636'
+        + '&account=3048704P27062020042058'
+        + '&autoOpen=0'
+        + '&hideWhenOffline=0'
+        + '&d=volt-solar'
+        + '&ts=' + new Date().getTime()
+        + '&ref=' + encodeURIComponent(document.URL);
+    document.body.appendChild(ttChatLoaderS);
 </script>

@@ -65,7 +65,7 @@ function campo4() {
 
     div_inp4.innerHTML = ''
 
-    if (senha.length < 8){
+    if (senha.length < 4){
         div_inp4.innerHTML = 'senha invalida!'
         return 0;
     }
@@ -79,7 +79,7 @@ function campo5() {
 
     div_inp5.innerHTML = ''
 
-    if (cpf.length < 14){
+    if (cpf.length < 11){
         div_inp5.innerHTML = 'CPF invalido!'
         return 0;
     }
@@ -89,8 +89,16 @@ function campo5() {
 }
 
 function campo6() {
-    div_inp6.innerHTML = 'Digite o DDD antes do numero'
-    return 1;
+    var telefoneFixo = inp6.value;
+    
+    if(telefoneFixo.length<=0){
+        div_inp6.innerHTML=`Digite o DDD antes do número.`;
+        return 0;
+    }
+    else{
+        div_inp6.innerHTML='';
+        return 1;
+    }
 }
 
 function campo7() {
@@ -104,6 +112,7 @@ function campo8() {
 }
 
 function campo9() {
+
     div_inp9.innerHTML = 'Coloque o identificador da sua empresa aqui'
     return 1;
 }
